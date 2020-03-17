@@ -1,0 +1,21 @@
+FROM balenalib/raspberrypi3-python:2-build
+
+RUN apt-get update
+RUN apt-get -y install libfftw3-dev cmake libusb-1.0-0-dev
+RUN apt install netcat
+
+RUN mkdir -p /tmp
+COPY fft_fftw.c /tmp/fft_fftw.c
+COPY fft_fftw.h /tmp/fft_fftw.h
+COPY Makefile /tmp/Makefile
+
+COPY install.sh /usr/src/app/install.sh
+RUN ["chmod", "+x", "/usr/src/app/install.sh"]
+RUN ["/usr/src/app/install.sh"]
+
+COPY entry.sh /usr/src/app/entry.sh
+RUN ["chmod", "+x", "/usr/src/app/entry.sh"]
+
+COPY config_alt.py /usr/src/app/openwebrx/config_alt.py
+
+CMD ["bash","/usr/src/app/entry.sh"]

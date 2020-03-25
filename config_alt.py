@@ -61,10 +61,15 @@ Happy listening!
 # If you want your ham receiver to be listed publicly on sdr.hu, then take the following steps:
 # 1. Register at: http://sdr.hu/register
 # 2. You will get an unique key by email. Copy it and paste here:
-sdrhu_key = ""
+sdrhu_key = os.getenv('ORX_SDRHU_KEY', '')
 # 3. Set this setting to True to enable listing:
-sdrhu_public_listing = False
-
+if os.getenv('ORX_SDRHU_KEY', ''):
+  sdrhu_public_listing = False
+  print "sdr.hu listing set: false"
+else:
+  sdrhu_public_listing = True  
+  print "sdr.hu listing set: true"
+    
 # ==== DSP/RX settings ====
 fft_fps=9
 fft_size=4096 #Should be power of 2

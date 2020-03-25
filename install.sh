@@ -32,6 +32,8 @@ cp -f /tmp/Makefile /usr/src/app/csdr/Makefile
 cp -f /tmp/fft_fftw.c /usr/src/app/csdr/fft_fftw.c
 cp -f /tmp/fft_fftw.h /usr/src/app/csdr/fft_fftw.h
 
+cp -f /tmp/sdrhu.py /usr/src/app/openwebrx/sdrhu.py
+
 #Compile libcsdr (which is a dependency of OpenWebRX)
 echo "***** compiling libcsdr *****"
 cd csdr

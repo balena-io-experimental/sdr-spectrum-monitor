@@ -64,11 +64,11 @@ Happy listening!
 sdrhu_key = os.getenv('ORX_SDRHU_KEY', '')
 # 3. Set this setting to True to enable listing:
 if os.getenv('ORX_SDRHU_KEY', ''):
-  sdrhu_public_listing = False
-  print "sdr.hu listing set: false"
-else:
-  sdrhu_public_listing = True  
+  sdrhu_public_listing = True
   print "sdr.hu listing set: true"
+else:
+  sdrhu_public_listing = False  
+  print "sdr.hu listing set: false"
     
 # ==== DSP/RX settings ====
 fft_fps=9

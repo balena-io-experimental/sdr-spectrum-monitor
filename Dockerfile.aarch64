@@ -8,6 +8,7 @@ RUN mkdir -p /tmp
 COPY fft_fftw.c /tmp/fft_fftw.c
 COPY fft_fftw.h /tmp/fft_fftw.h
 COPY Makefile /tmp/Makefile
+COPY sdrhu.py /tmp/sdrhu.py
 
 COPY install.sh /usr/src/app/install.sh
 RUN ["chmod", "+x", "/usr/src/app/install.sh"]

@@ -31,6 +31,7 @@ To access your spectrum monitor on your local network, enter the IP address (fou
 * ORX_MAX_CLIENTS - Maximum number of clients that can connect at once (default is 20)
 * ORX_NAME - Name to display on your spectrum page
 * ORX_LOCATION - Location to display on your spectrum page
+* ORX_SDRHU_KEY - If you have registered on sdr.hu and have a key, you can set it here and your receiver will be shared.
 
 The waterfall display shows any detected signals in a highlighted color. Click on a signal to listen to the audio, if available. You may need to try switching the type of demodulation (such as AM, FM, etc…) using the buttons on the lower right of the display to hear proper audio.
 
